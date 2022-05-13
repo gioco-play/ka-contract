@@ -23,26 +23,9 @@ interface KAServiceInterface {
      * @param string $opCode
      * @param string $account
      * @param string $betId
+     * @param string $language
      * @return mixed
      */
-    function gameDetail(string $opCode, string $account, string $betId);
-
-    /**
-     * 抓取遊戲紀錄
-     *
-     * @param string $opCode
-     * @param integer $pastMinutes
-     * @param string $cacheKey
-     * @return mixed
-     */
-    function betLogGrabber(string $opCode, int $pastMinutes, string $cacheKey);
-
-    /**
-     * 全營商 抓取遊戲紀錄
-     *
-     * @param integer $pastMinutes
-     * @return mixed
-     */
-    function betLogGrabberAll(int $pastMinutes);
+    function gameDetail(string $opCode, string $account, string $betId, string $language = '');
 }
 
